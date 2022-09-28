@@ -5,7 +5,7 @@ export default class Product {
     description;
     image;
     price;
-    // variations;
+    isFavorite;
 
     constructor(id, name, description, image, price) {
         this.name = name;
@@ -13,6 +13,10 @@ export default class Product {
         this.image = image;
         this.image = image;
         this.price = price;
-        // this.variations = variations;
+        this.isFavorite = Math.random() < 0.5;
+    }
+
+    getPrice() {
+        return '$' + this.price.toFixed(2)
     }
 }

@@ -1,15 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Light.woff2') format('woff2'),
+    url('../font/Satoshi-Light.woff') format('woff'),
+    url('../font/Satoshi-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
 
-*{
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Regular.woff2') format('woff2'),
+    url('../font/Satoshi-Regular.woff') format('woff'),
+    url('../font/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Medium.woff2') format('woff2'),
+    url('../font/Satoshi-Medium.woff') format('woff'),
+    url('../font/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Bold.woff2') format('woff2'),
+    url('../font/Satoshi-Bold.woff') format('woff'),
+    url('../font/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Black.woff2') format('woff2'),
+    url('../font/Satoshi-Black.woff') format('woff'),
+    url('../font/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+* {
     padding: 0;
     margin: 0;
-    font-family: Comfortaa, sans-serif;
+    font-family: 'Satoshi', sans-serif;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
 .main {
     flex: 1 1 auto;
 }
@@ -25,10 +75,11 @@
     width: 100%;
     background: #fff;
     box-shadow: 1px 4px 30px rgba(0, 0, 0, 0.1);
-    height: 85px;
+    height: 65px;
     border-radius: 15px 15px 0 0;
 }
-.footer__nav{
+
+.footer__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,15 +88,19 @@
     align-items: center;
     height: 100%;
 }
-.footer__nav li{
+
+.footer__nav li {
     padding: 0 15px;
 }
+
 .footer__nav li a img {
     transition: ease .2s;
 }
-.footer__nav li a.active img{
+
+.footer__nav li a.active img {
     filter: brightness(0);
 }
+
 .fade-enter-active,
 .fade-leave-active {
     transition-duration: 0.1s;
@@ -57,20 +112,75 @@
 .fade-leave-active {
     opacity: 0
 }
-.catalog__list{
+
+.catalog__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 30px 10px;
 }
+
 .catalog__list .product-card {
-    padding: 15px 10px;
+    padding: 5px;
+    text-decoration: none;
 }
+
 .product-card__image {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     background: #EFEFEF;
     box-shadow: 11px 17px 27px rgba(1, 0, 0, 0.04);
+    border-radius: 10px;
 }
-.product-card__image img{
-    max-width: 100%;
+
+.product-card__image .product-card__image-container img {
+    max-width: 150px;
+    margin-top: 30px;
+    scale: 1.1;
+}
+
+.product-card__data {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.product-card__name {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.product-card__price {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 900;
+    color: #000;
+}
+.header__title{
+    font-weight: 900;
+    font-size: 20px;
+}
+.header {
+    width: 100%;
+    height: 50px;
+}
+.header__wrapper{
+    background: #fff;
+}
+.header__row{
+    padding: 25px 20px 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__actions-favorite{
+    position: absolute;
+    right: 15px;
+    top: 9px;
+
 }
