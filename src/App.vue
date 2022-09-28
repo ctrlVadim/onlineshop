@@ -1,7 +1,12 @@
 <template>
   <div class="wrapper">
     <main class="main">
-      <router-view></router-view>
+            <transition
+                    name="fade"
+                    mode="out-in"
+            >
+                <router-view/>
+            </transition>
     </main>
     <Footer/>
   </div>
@@ -11,4 +16,3 @@
   import Footer from "./components/layouts/Footer.vue";
 
 </script>
-
